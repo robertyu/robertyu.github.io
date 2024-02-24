@@ -53,9 +53,11 @@ def find_markdown_files(root_path):
 
 def main(root_path, readme_path):
     markdown_files = find_markdown_files(root_path)
+    # Extract year and month from filenames and sort
+    sorted_files = sorted(markdown_files, key=lambda x: x.split('.')[-2:])
     links = []
 
-    for md_file in markdown_files:
+    for md_file in sorted_files:
         html_content = convert_md_to_html(md_file)
         output_file = md_file.replace('.md', '.html')
         save_html(html_content, output_file)
@@ -63,8 +65,10 @@ def main(root_path, readme_path):
         file_url = output_file
         links.append({'title': file_title, 'url': file_url})
 
+    # Ensure README is updated in sorted order
     add_links_to_readme(readme_path, links)
     print("Conversion complete. README updated with links to HTML files.")
+
 
 if __name__ == "__main__":
     root_path = '.'  # Set to your Markdown files' root directory
