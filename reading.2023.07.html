@@ -1,0 +1,427 @@
+<h2>
+ MISC
+</h2>
+<ul>
+ <li>
+  <a href="https://github.com/DegateCommunity/Degate">
+   Degate
+  </a>
+  : A modern and open-source cross-platform software for chips reverse engineering.
+  <a href="https://www.degate.org/">
+   Web Site
+  </a>
+ </li>
+ <li>
+  <a href="https://github.com/damienvanrobaeys/Run-in-Sandbox">
+   Run-in-Sandbox
+  </a>
+  : Run PS1, VBS, CMD, EXE, MSI, Intunewin, MSIX, or extract ISO, ZIP in Windows Sandbox very quickly just from a right-click. Prerequisites: At least Windows 10 1903, Windows Sandbox feature enabled, Admin rights to install the tool.
+ </li>
+ <li>
+  <a href="https://developer.paypal.com/docs/checkout/standard/integrate/?_ga=2.257555011.999652037.1687856298-967158204.1687856298">
+   Payapl 網站整合
+  </a>
+ </li>
+ <li>
+  找時間真的要好好搞清楚 怎麼用鍵盤移動:
+  <a href="https://stackoverflow.com/questions/81272/how-to-move-the-cursor-word-by-word-in-the-os-x-terminal">
+   How to move the cursor word by word in the OS X Terminal
+  </a>
+  , 垂直選擇的部分:
+  <a href="https://superuser.com/questions/93573/select-text-in-iterm-using-keyboard">
+   Sublime
+  </a>
+ </li>
+ <li>
+  <a href="https://github.com/not-yet-awesome-rust/not-yet-awesome-rust">
+   not-yet-awesome-rust
+  </a>
+  : A curated list of Rust code and resources that do NOT exist yet, but would be beneficial to the Rust community. 只能說這社群真給力
+ </li>
+ <li>
+  <a href="https://saurabhs.org/advanced-macos-commands">
+   Advanced macOS Command-Line Tools
+  </a>
+  : macOS is fortunate to have access to the huge arsenal of standard Unix tools. There are also a good number of macOS-specific command-line utilities that provide unique macOS functionality.
+ </li>
+ <li>
+  <a href="https://github.com/yt-dlp/yt-dlp">
+   yt-dlp
+  </a>
+  : yt-dlp is a youtube-dl fork based on the now inactive youtube-dlc. The main focus of this project is adding new features and patches while also keeping up to date with the original project. 現在抓 twitter 要靠這個了, 先設個tlink變數
+  <code>
+   tlink=https://twitter.com/...
+  </code>
+  , 然後呼叫
+  <code>
+   yt-dlp $tlink --cookies-from-browser chrome
+  </code>
+  , 要給檔案名稱:
+  <code>
+   yt-dlp $tlink --cookies-from-browser chrome -o xx.mp4
+  </code>
+ </li>
+ <li>
+  <a href="https://learn.microsoft.com/en-us/cli/azure/acr/manifest?view=azure-cli-latest">
+   AZ command line repo management
+  </a>
+ </li>
+ <li>
+  Telegram bot/API 的部分搬到
+  <a href="https://github.com/LonamiWebs/Telethon">
+   Telethon
+  </a>
+  , 比較過真的這個方便, telegram-bot-python 改版改廢了.
+  <a href="https://docs.telethon.dev/en/stable/concepts/entities.html">
+   文件
+  </a>
+  .
+ </li>
+ <li>
+  <a href="https://stackoverflow.com/questions/32423837/telegram-bot-how-to-get-a-group-chat-id">
+   Telegram Bot 怎麼取得 chat id
+  </a>
+ </li>
+ <li>
+  Github Token GG 被更新了怎麼辦, 在linux下面直接改
+  <code>
+   /repo/.git/config
+  </code>
+  , 換掉token就好了. 網路上眾說紛紜, Github自己也不出台個文件.
+ </li>
+ <li>
+  <code>
+   error: Can not find Rust compiler
+  </code>
+  , build docker images出現這個, 如果是 python base, 就是python版本太舊了, 被package淘汰了.
+ </li>
+ <li>
+  影片轉音檔:
+  <code>
+   ffmpeg -i sample.avi -ss 00:03:05 -t 00:00:45.0 -q:a 0 -map a sample.mp3
+  </code>
+  或是
+  <code>
+   ffmpeg -i sample.avi -ss 00:03:05 -t 00:00:45.0 -q:a 0 -map a sample.m4a
+  </code>
+  ,
+  <a href="https://stackoverflow.com/questions/9913032/how-can-i-extract-audio-from-video-with-ffmpeg">
+   詳細討論
+  </a>
+ </li>
+ <li>
+  <a href="https://szlin.me/2018/11/09/%E6%B7%BA%E8%AB%87-server-side-public-license/">
+   Server Side Public License
+  </a>
+  這篇講這個License講得很清楚.
+  <a href="https://github.com/FerretDB/FerretDB">
+   FerretDB
+  </a>
+  這個是因為MongoDB改License之後衍生的 : A truly Open Source MongoDB alternative.
+ </li>
+ <li>
+  <a href="https://www.reddit.com/r/dotnet/comments/14picbr/comment/jqj3n2w/?utm_source=share&amp;utm_medium=ios_app&amp;utm_name=ioscss&amp;utm_content=1&amp;utm_term=1&amp;context=3">
+   Reddit上面在笑.Net
+  </a>
+ </li>
+ <li>
+  <a href="https://github.com/PetoiCamp/OpenCat">
+   OpenCat
+  </a>
+  . An open source quadruped robot pet framework for developing Boston Dynamics-style four-legged robots that are perfect for STEM, coding &amp; robotics education, IoT robotics applications, AI-enhanced robotics application services, and research.
+  <strong>
+   Boston Dynamics 開源版
+  </strong>
+ </li>
+ <li>
+  <a href="https://cali.so/blog/react-or-vue-my-take-on-web-dev">
+   React 還是Vue？我對Web 前端現狀的看法
+  </a>
+  , 這篇探討React/Vue的比較, 個人是覺得頗中肯, 感覺跟自己經驗差不多, 不知道是否會有反方論證.
+ </li>
+ <li>
+  <a href="https://www.kyoto-u.ac.jp/en/research-news/2021-03-31">
+   New drug to regenerate lost teeth
+  </a>
+  , 這個厲害了, 希望哪天真的能搞定, 成年換齒.
+ </li>
+ <li>
+  <a href="https://github.com/ryanmcgrath/cacao">
+   cacao
+  </a>
+  : Rust bindings for AppKit (macOS) and UIKit (iOS/tvOS).
+  <strong>
+   Experimental, but working!
+  </strong>
+ </li>
+ <li>
+  <a href="https://www.chunfuchao.com/posts/everything-you-do-is-ultimately-pointless/">
+   工程師生涯
+  </a>
+  這真的是經歷過的感悟.
+ </li>
+ <li>
+  <a href="https://github.com/ziglang/zig">
+   Zig
+  </a>
+  : General-purpose programming language and toolchain for maintaining robust, optimal, and reusable software.
+ </li>
+ <li>
+  <a href="https://github.com/maplibre/martin">
+   Martin
+  </a>
+  : Blazing fast and lightweight PostGIS, MBtiles and PMtiles tile server
+ </li>
+ <li>
+  <a href="https://github.com/orf/gping">
+   gping
+  </a>
+  : Ping, but with a graph, Base on Rust.
+ </li>
+ <li>
+  <a href="https://github.com/liriliri/eruda">
+   eruda
+  </a>
+  : Console for mobile browsers. 為手機網頁前端設計的調試面板。
+ </li>
+ <li>
+  <a href="https://github.com/windmill-labs/windmill#how-to-self-host">
+   windmill
+  </a>
+  : Open-source developer platform to turn scripts into workflows and UIs. Open-source alternative to Airplane and Retool. 這個看起來挺炫的, 不知道人多的時候會怎樣. 雖說我不會用 (沒幾隻小貓的話, 用這個只是增加負擔), 但我可以欣賞.
+ </li>
+ <li>
+  <a href="https://github.com/pxng0lin/python-tools">
+   python-tools
+  </a>
+  , 列下來是想看看他會更新多久.
+ </li>
+</ul>
+<hr/>
+<h1>
+ ML Topics
+</h1>
+<h2>
+ LLM
+</h2>
+<ul>
+ <li>
+  <a href="https://github.com/embedchain/embedchain">
+   embedchain
+  </a>
+  : Framework to easily create LLM powered bots over any dataset. python base. Embedchain abstracts the entire process of loading a dataset, chunking it, creating embeddings and then storing in a vector database.
+ </li>
+ <li>
+  大型語言模型（LLM）已經很強了，但還可以更強。通過結合知識圖譜，LLM 有望解決缺乏事實知識、幻覺和可解釋性等諸多問題, 介紹一篇綜述LLM 與知識圖譜聯合相關研究的論文，其中既包含用知識圖譜增強LLM 的研究進展，也有用LLM 增強知識圖譜的研究成果，還有LLM 與知識圖譜協同的最近成果。文中概括性的框架展示非常方便讀者參考。
+  <a href="https://www.jiqizhixin.com/articles/2023-07-03-6">
+   大型語言模型與知識圖譜協同研究綜述：兩大技術優勢互補
+  </a>
+ </li>
+ <li>
+  <a href="https://lilianweng.github.io/posts/2023-06-23-agent/">
+   LLM Powered Autonomous Agents
+  </a>
+  這篇可能是個機會, tools看這塊.
+ </li>
+ <li>
+  <a href="https://github.com/mosaicml/composer">
+   composer
+  </a>
+  : Train neural networks up to 7x faster. A PyTorch Library for Efficient Neural Network Training. We've implemented more than two dozen speedup methods that can be applied to your training loop in just a few lines of code, or used with our built-in Trainer. We continually integrate the latest state-of-the-art in efficient neural network training.
+ </li>
+</ul>
+<h2>
+ TTS
+</h2>
+<ul>
+ <li>
+  <a href="https://beta.elevenlabs.io/">
+   Prime Voice AI
+  </a>
+  : 這要錢, 不過免費可用, 聲庫優
+ </li>
+ <li>
+  <a href="https://beta.elevenlabs.io/voice-library">
+   voice-library
+  </a>
+  Get access to an ever-growing library of high quality AI voices and discover characters that perfectly fit your needs. 有蠻多現成品的.
+ </li>
+</ul>
+<h2>
+ Codepilot
+</h2>
+<ul>
+ <li>
+  <a href="https://github.com/mengjian-github/copilot-analysis">
+   copilot-analysis
+  </a>
+  , 對codepilot做逆向工程, 完整的過程
+ </li>
+ <li>
+ </li>
+</ul>
+<h2>
+ GPT
+</h2>
+<ul>
+ <li>
+  <a href="https://github.com/0xpayne/gpt-migrate">
+   gpt-migrate
+  </a>
+  : Easily migrate your codebase from one framework or language to another. Migration is a costly, tedious, and non-trivial problem.
+  <strong>
+   Do not trust
+  </strong>
+  the current version blindly and please use responsibly. Please also be aware that costs can add up quickly as GPT-Migrate is designed to write (and potentially re-write) the entirety of a codebase.
+ </li>
+ <li>
+  <a href="https://github.com/jxnl/openai_function_call">
+   openai_function_call
+  </a>
+  : Helper functions to create openai function calls w/ pydantic. Pydantic is all you need: An OpenAI Function Call Pydantic Integration Module.We try to provides a powerful and efficient approach to output parsing when interacting with OpenAI's Function Call API. One that is framework agnostic and minimizes any dependencies. It leverages the data validation capabilities of the Pydantic library to handle output parsing in a more structured and reliable manner.
+ </li>
+ <li>
+  <a href="https://writesonic.com/botsonic">
+   botsonic
+  </a>
+  , 這速度真快.
+ </li>
+ <li>
+  <a href="https://www.ben-evans.com/benedictevans/2023/7/2/working-with-ai">
+   AI and the automation of work
+  </a>
+  , 歷史回顧跟預測.
+ </li>
+ <li>
+  <a href="https://github.com/brexhq/prompt-engineering">
+   prompt-engineering
+  </a>
+  . Tips and tricks for working with Large Language Models like OpenAI's GPT-4. 2023, May 17.
+ </li>
+ <li>
+ </li>
+</ul>
+<hr/>
+<h1>
+ Coding
+</h1>
+<h2>
+ PSQL
+</h2>
+<ul>
+ <li>
+  <code>
+   \x on
+  </code>
+  ,
+  <code>
+   \x off
+  </code>
+  ,
+  <code>
+   \x auto
+  </code>
+  ,
+  <code>
+   \pset format
+  </code>
+  output formating.
+ </li>
+ <li>
+  <code>
+   select Column1, Column2, count(*) from yourTable group by Column1, Column2 HAVING count(*) &gt; 1
+  </code>
+  , duplicated records query.
+ </li>
+ <li>
+  <code>
+   \pset format csv
+  </code>
+  , output format as csv
+ </li>
+ <li>
+  query by datetime compare:
+  <code>
+   SELECT * FROM table WHERE update_date &gt;= '2013-05-03'::date AND update_date &lt; ('2013-05-03'::date + '1 day'::interval);
+  </code>
+  , update version:
+  <code>
+   UPDATE mytable SET field1 = '2015-12-31'::timestamp + EXTRACT(HOUR FROM field1) * INTERVAL '1 HOUR' + EXTRACT(MINUTE FROM field1) * INTERVAL '1 MINUTE' + EXTRACT(SECOND FROM field1) * INTERVAL '1 SECOND'
+  </code>
+ </li>
+ <li>
+  <code>
+   WITH rows AS (...) INSERT INTO dealer (user_id) SELECT id FROM rows RETURNING id;
+  </code>
+  , 有點繞, 不過就是這樣SELECT, INSERT, RETURN.
+ </li>
+ <li>
+ </li>
+</ul>
+<h2>
+ React Chart
+</h2>
+<ul>
+ <li>
+  <a href="https://recharts.org/en-US/examples/CustomContentTreemap">
+   recharts
+  </a>
+  清爽,
+  <a href="https://github.com/recharts/recharts">
+   repo
+  </a>
+ </li>
+ <li>
+  <a href="https://github.com/uber/react-vis">
+   react-vis
+  </a>
+  , Uber家用的, Data Visualization Components (試了一下, 不好用, 文件少, stackoverflow沒啥討論, 要自己啃source code, 放棄)
+ </li>
+ <li>
+  <a href="https://echarts.apache.org/">
+   Apache ECharts
+  </a>
+  ,
+  <a href="https://github.com/apache/echarts">
+   repo
+  </a>
+  : About
+Apache ECharts is a powerful, interactive charting and data visualization library for browser, 這個很齊, 啥鬼圖都有
+ </li>
+</ul>
+<h2>
+ React
+</h2>
+<ul>
+ <li>
+  <a href="https://stackoverflow.com/questions/60795932/react-for-displaying-the-log-file-in-real-time-flask-backend">
+   tail file to frontend
+  </a>
+ </li>
+ <li>
+  <a href="https://www.npmjs.com/package/react-lazylog">
+   tail file to fronent - package: react-lazylog
+  </a>
+ </li>
+ <li>
+  <a href="https://plainenglish.io/blog/the-difference-between-usestate-and-useref-in-react-fa3ccd9aeda5">
+   The Difference Between useState and useRef in React
+  </a>
+ </li>
+ <li>
+  [拖時間]
+  <code>
+   const delay = ms =&gt; new Promise(res =&gt; setTimeout(res, ms));
+  </code>
+  , 然後
+  <code>
+   const yourFunction = async () =&gt; {  await delay(5000);  console.log("Waited 5s");  await delay(5000);  console.log("Waited an additional 5s");};
+  </code>
+  ,
+  <a href="https://stackoverflow.com/questions/14226803/wait-5-seconds-before-executing-next-line">
+   討論
+  </a>
+ </li>
+ <li>
+ </li>
+</ul>

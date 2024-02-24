@@ -1,3 +1,15 @@
+## Local LLM
+
+因為這幾天比較有空, 花了點時間弄 local LLM, 有點小小的心得.
+
+千萬不要自己搞, 要跑 inference 就下載 [ollama](https://github.com/ollama/ollama), 裝好之後再去他的 [Library](https://ollama.com/library) 看喜歡哪個, 就pull/run哪個.
+
+手頭是MAC的真心建議先跑上面的方法, 快又無腦, 有空想自己搞再自己搞.
+
+然後 vscode 的 extension 請用 [continue](https://github.com/continuedev/continue), 方便設定 local LLM.
+
+上面就先求有, 有空再求好.
+
 ## MISC
 
 #### >>> 密碼管理的另類思考
