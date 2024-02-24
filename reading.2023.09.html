@@ -1,246 +1,160 @@
-<h1>
- Misc
-</h1>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>reading.2023.09</title>
+        <style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.codehilite .hll { background-color: #49483e }
+.codehilite { background: #272822; color: #f8f8f2 }
+.codehilite .c { color: #75715e } /* Comment */
+.codehilite .err { color: #960050; background-color: #1e0010 } /* Error */
+.codehilite .esc { color: #f8f8f2 } /* Escape */
+.codehilite .g { color: #f8f8f2 } /* Generic */
+.codehilite .k { color: #66d9ef } /* Keyword */
+.codehilite .l { color: #ae81ff } /* Literal */
+.codehilite .n { color: #f8f8f2 } /* Name */
+.codehilite .o { color: #f92672 } /* Operator */
+.codehilite .x { color: #f8f8f2 } /* Other */
+.codehilite .p { color: #f8f8f2 } /* Punctuation */
+.codehilite .ch { color: #75715e } /* Comment.Hashbang */
+.codehilite .cm { color: #75715e } /* Comment.Multiline */
+.codehilite .cp { color: #75715e } /* Comment.Preproc */
+.codehilite .cpf { color: #75715e } /* Comment.PreprocFile */
+.codehilite .c1 { color: #75715e } /* Comment.Single */
+.codehilite .cs { color: #75715e } /* Comment.Special */
+.codehilite .gd { color: #f92672 } /* Generic.Deleted */
+.codehilite .ge { color: #f8f8f2; font-style: italic } /* Generic.Emph */
+.codehilite .gr { color: #f8f8f2 } /* Generic.Error */
+.codehilite .gh { color: #f8f8f2 } /* Generic.Heading */
+.codehilite .gi { color: #a6e22e } /* Generic.Inserted */
+.codehilite .go { color: #66d9ef } /* Generic.Output */
+.codehilite .gp { color: #f92672; font-weight: bold } /* Generic.Prompt */
+.codehilite .gs { color: #f8f8f2; font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #75715e } /* Generic.Subheading */
+.codehilite .gt { color: #f8f8f2 } /* Generic.Traceback */
+.codehilite .kc { color: #66d9ef } /* Keyword.Constant */
+.codehilite .kd { color: #66d9ef } /* Keyword.Declaration */
+.codehilite .kn { color: #f92672 } /* Keyword.Namespace */
+.codehilite .kp { color: #66d9ef } /* Keyword.Pseudo */
+.codehilite .kr { color: #66d9ef } /* Keyword.Reserved */
+.codehilite .kt { color: #66d9ef } /* Keyword.Type */
+.codehilite .ld { color: #e6db74 } /* Literal.Date */
+.codehilite .m { color: #ae81ff } /* Literal.Number */
+.codehilite .s { color: #e6db74 } /* Literal.String */
+.codehilite .na { color: #a6e22e } /* Name.Attribute */
+.codehilite .nb { color: #f8f8f2 } /* Name.Builtin */
+.codehilite .nc { color: #a6e22e } /* Name.Class */
+.codehilite .no { color: #66d9ef } /* Name.Constant */
+.codehilite .nd { color: #a6e22e } /* Name.Decorator */
+.codehilite .ni { color: #f8f8f2 } /* Name.Entity */
+.codehilite .ne { color: #a6e22e } /* Name.Exception */
+.codehilite .nf { color: #a6e22e } /* Name.Function */
+.codehilite .nl { color: #f8f8f2 } /* Name.Label */
+.codehilite .nn { color: #f8f8f2 } /* Name.Namespace */
+.codehilite .nx { color: #a6e22e } /* Name.Other */
+.codehilite .py { color: #f8f8f2 } /* Name.Property */
+.codehilite .nt { color: #f92672 } /* Name.Tag */
+.codehilite .nv { color: #f8f8f2 } /* Name.Variable */
+.codehilite .ow { color: #f92672 } /* Operator.Word */
+.codehilite .pm { color: #f8f8f2 } /* Punctuation.Marker */
+.codehilite .w { color: #f8f8f2 } /* Text.Whitespace */
+.codehilite .mb { color: #ae81ff } /* Literal.Number.Bin */
+.codehilite .mf { color: #ae81ff } /* Literal.Number.Float */
+.codehilite .mh { color: #ae81ff } /* Literal.Number.Hex */
+.codehilite .mi { color: #ae81ff } /* Literal.Number.Integer */
+.codehilite .mo { color: #ae81ff } /* Literal.Number.Oct */
+.codehilite .sa { color: #e6db74 } /* Literal.String.Affix */
+.codehilite .sb { color: #e6db74 } /* Literal.String.Backtick */
+.codehilite .sc { color: #e6db74 } /* Literal.String.Char */
+.codehilite .dl { color: #e6db74 } /* Literal.String.Delimiter */
+.codehilite .sd { color: #e6db74 } /* Literal.String.Doc */
+.codehilite .s2 { color: #e6db74 } /* Literal.String.Double */
+.codehilite .se { color: #ae81ff } /* Literal.String.Escape */
+.codehilite .sh { color: #e6db74 } /* Literal.String.Heredoc */
+.codehilite .si { color: #e6db74 } /* Literal.String.Interpol */
+.codehilite .sx { color: #e6db74 } /* Literal.String.Other */
+.codehilite .sr { color: #e6db74 } /* Literal.String.Regex */
+.codehilite .s1 { color: #e6db74 } /* Literal.String.Single */
+.codehilite .ss { color: #e6db74 } /* Literal.String.Symbol */
+.codehilite .bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+.codehilite .fm { color: #a6e22e } /* Name.Function.Magic */
+.codehilite .vc { color: #f8f8f2 } /* Name.Variable.Class */
+.codehilite .vg { color: #f8f8f2 } /* Name.Variable.Global */
+.codehilite .vi { color: #f8f8f2 } /* Name.Variable.Instance */
+.codehilite .vm { color: #f8f8f2 } /* Name.Variable.Magic */
+.codehilite .il { color: #ae81ff } /* Literal.Number.Integer.Long */</style>
+    </head>
+    <body>
+        <h1>Misc</h1>
 <ul>
- <li>
-  <a href="https://github.com/google/highway">
-   highway
-  </a>
-  : Efficient and performance-portable vector software - CPUs provide SIMD/vector instructions that apply the same operation to multiple data items. This can reduce energy usage e.g. fivefold because fewer instructions are executed. We also often see 5-10x speedups.
- </li>
- <li>
-  <a href="https://github.com/NLnetLabs/unbound">
-   unbound
-  </a>
-  : Unbound is a validating, recursive, and caching DNS resolver. -
-  <a href="https://unbound.docs.nlnetlabs.nl/en/latest/">
-   docs
-  </a>
- </li>
- <li>
-  <a href="https://github.com/misprit7/computerraria">
-   computerraria
-  </a>
-  : A fully compliant RISC-V computer made inside the game Terraria.
-  <a href="https://youtu.be/zXPiqk0-zDY">
-   video
-  </a>
- </li>
- <li>
-  <a href="https://github.com/manjunath5496/Networking-Books">
-   Networking-Books
-  </a>
-  : "Learning networking basics is only a gateway to career growth and exploration." - Tae Yoo
- </li>
- <li>
-  <a href="https://en.wikipedia.org/wiki/Bayesian_inference">
-   Bayesian inference
-  </a>
- </li>
- <li>
-  <a href="https://en.wikipedia.org/wiki/Radix_tree">
-   Radix tree
-  </a>
-  -
-  <a href="https://github.com/mjschultz/py-radix">
-   py-radix
-  </a>
- </li>
- <li>
-  <a href="https://blog.dornea.nu/2023/07/30/documentation-as-code-for-cloud-plantuml/">
-   Documentation as Code for Cloud - PlantUML
-  </a>
- </li>
- <li>
-  <a href="https://packaging.python.org/en/latest/guides/hosting-your-own-index/">
-   Hosting your own simple repository
-  </a>
-  - 自己的 PyPI -&gt;
-  <a href="https://github.com/pypiserver/pypiserver">
-   pypiserver
-  </a>
-  Minimal PyPI server for uploading &amp; downloading packages with pip/easy_install
- </li>
- <li>
-  <a href="https://github.com/kuchin/awesome-cto">
-   Awesome CTO
-  </a>
-  : A curated and opinionated list of resources for Chief Technology Officers, with the emphasis on startups
- </li>
- <li>
-  <a href="https://hom-wang.gitbooks.io/verilog-hdl/content/Chapter_01.html">
-   Verilog 中文簡介
-  </a>
- </li>
+<li><a href="https://github.com/google/highway">highway</a>: Efficient and performance-portable vector software - CPUs provide SIMD/vector instructions that apply the same operation to multiple data items. This can reduce energy usage e.g. fivefold because fewer instructions are executed. We also often see 5-10x speedups.</li>
+<li><a href="https://github.com/NLnetLabs/unbound">unbound</a>: Unbound is a validating, recursive, and caching DNS resolver. - <a href="https://unbound.docs.nlnetlabs.nl/en/latest/">docs</a></li>
+<li><a href="https://github.com/misprit7/computerraria">computerraria</a>: A fully compliant RISC-V computer made inside the game Terraria. <a href="https://youtu.be/zXPiqk0-zDY">video</a></li>
+<li><a href="https://github.com/manjunath5496/Networking-Books">Networking-Books</a>: "Learning networking basics is only a gateway to career growth and exploration." - Tae Yoo</li>
+<li><a href="https://en.wikipedia.org/wiki/Bayesian_inference">Bayesian inference</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Radix_tree">Radix tree</a> - <a href="https://github.com/mjschultz/py-radix">py-radix</a></li>
+<li><a href="https://blog.dornea.nu/2023/07/30/documentation-as-code-for-cloud-plantuml/">Documentation as Code for Cloud - PlantUML</a></li>
+<li><a href="https://packaging.python.org/en/latest/guides/hosting-your-own-index/">Hosting your own simple repository</a> - 自己的 PyPI -&gt; <a href="https://github.com/pypiserver/pypiserver">pypiserver</a> Minimal PyPI server for uploading &amp; downloading packages with pip/easy_install</li>
+<li><a href="https://github.com/kuchin/awesome-cto">Awesome CTO</a>: A curated and opinionated list of resources for Chief Technology Officers, with the emphasis on startups</li>
+<li><a href="https://hom-wang.gitbooks.io/verilog-hdl/content/Chapter_01.html">Verilog 中文簡介</a></li>
 </ul>
-<p>
- --
-</p>
-<h1>
- AI
-</h1>
-<h2>
- ChatGPT
-</h2>
+<p>--</p>
+<h1>AI</h1>
+<h2>ChatGPT</h2>
 <ul>
- <li>
-  <a href="https://github.com/continuedev/continue">
-   continue
-  </a>
-  : the open-source autopilot for software development—bring the power of ChatGPT to VS Code
- </li>
+<li><a href="https://github.com/continuedev/continue">continue</a>: the open-source autopilot for software development—bring the power of ChatGPT to VS Code</li>
 </ul>
-<h2>
- LLAMA
-</h2>
+<h2>LLAMA</h2>
 <ul>
- <li>
-  <a href="https://www.fast.ai/posts/2023-09-04-learning-jumps/">
-   Can LLMs learn from a single example?
-  </a>
- </li>
- <li>
-  <a href="https://github.com/a16z-infra/llama2-chatbot">
-   LLaMA v2 Chatbot
-  </a>
- </li>
- <li>
-  <a href="https://github.com/karpathy/llama2.c">
-   llama2.c
-  </a>
-  : Inference Llama 2 in one file of pure C
- </li>
- <li>
-  <a href="https://github.com/ggerganov/llama.cpp">
-   llama.cpp
-  </a>
-  : Port of Facebook's LLaMA model in C/C++
- </li>
- <li>
- </li>
+<li><a href="https://www.fast.ai/posts/2023-09-04-learning-jumps/">Can LLMs learn from a single example?</a></li>
+<li><a href="https://github.com/a16z-infra/llama2-chatbot">LLaMA v2 Chatbot</a></li>
+<li><a href="https://github.com/karpathy/llama2.c">llama2.c</a>: Inference Llama 2 in one file of pure C</li>
+<li><a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a>: Port of Facebook's LLaMA model in C/C++</li>
+<li></li>
 </ul>
-<h2>
- ML (include LLM)
-</h2>
+<h2>ML (include LLM)</h2>
 <ul>
- <li>
-  <a href="https://github.com/WooooDyy/LLM-Agent-Paper-List">
-   LLM-Agent-Paper-List
-  </a>
-  : About
-The paper list of the 86-page paper "The Rise and Potential of Large Language Model Based Agents: A Survey" by Zhiheng Xi et al.
- </li>
- <li>
-  <a href="https://github.com/microsoft/TypeChat">
-   TypeChat
-  </a>
-  : Microsoft repo: TypeChat is a library that makes it easy to build natural language interfaces using types.
-  <a href="https://microsoft.github.io/TypeChat/docs/introduction/">
-   docs
-  </a>
- </li>
- <li>
-  <a href="https://www.diva-portal.org/smash/get/diva2:1603345/FULLTEXT01.pdf">
-   Probabilistic Prediction in scikit-learn
-  </a>
- </li>
- <li>
-  <a href="https://ai.meta.com/blog/audiocraft-musicgen-audiogen-encodec-generative-ai-audio/">
-   audio made simple and available to all
-  </a>
-  : AudioCraft consists of three models: MusicGen, AudioGen, and EnCodec. MusicGen, which was trained with Meta-owned and specifically licensed music, generates music from text-based user inputs, while AudioGen, which was trained on public sound effects, generates audio from text-based user inputs.
- </li>
- <li>
-  <a href="https://hiervst.github.io/">
-   HierVST: Hierarchical Adaptive Zero-shot Voice Style Transfer
-  </a>
- </li>
- <li>
-  <a href="https://blog.jupyter.org/generative-ai-in-jupyter-3f7174824862">
-   Jupyter的改變
-  </a>
- </li>
- <li>
- </li>
+<li><a href="https://github.com/WooooDyy/LLM-Agent-Paper-List">LLM-Agent-Paper-List</a>: About
+The paper list of the 86-page paper "The Rise and Potential of Large Language Model Based Agents: A Survey" by Zhiheng Xi et al.</li>
+<li><a href="https://github.com/microsoft/TypeChat">TypeChat</a>: Microsoft repo: TypeChat is a library that makes it easy to build natural language interfaces using types. <a href="https://microsoft.github.io/TypeChat/docs/introduction/">docs</a></li>
+<li><a href="https://www.diva-portal.org/smash/get/diva2:1603345/FULLTEXT01.pdf">Probabilistic Prediction in scikit-learn</a></li>
+<li><a href="https://ai.meta.com/blog/audiocraft-musicgen-audiogen-encodec-generative-ai-audio/">audio made simple and available to all</a>: AudioCraft consists of three models: MusicGen, AudioGen, and EnCodec. MusicGen, which was trained with Meta-owned and specifically licensed music, generates music from text-based user inputs, while AudioGen, which was trained on public sound effects, generates audio from text-based user inputs. </li>
+<li><a href="https://hiervst.github.io/">HierVST: Hierarchical Adaptive Zero-shot Voice Style Transfer</a></li>
+<li><a href="https://blog.jupyter.org/generative-ai-in-jupyter-3f7174824862">Jupyter的改變</a></li>
+<li></li>
 </ul>
-<p>
- --
-</p>
-<h1>
- Security
-</h1>
-<h2>
- CVE
-</h2>
+<p>--</p>
+<h1>Security</h1>
+<h2>CVE</h2>
 <ul>
- <li>
-  <a href="https://github.com/dhmosfunk/CVE-2023-25690-POC">
-   CVE-2023-25690-POC
-  </a>
-  : CVE 2023 25690 Proof of concept - mod_proxy vulnerable configuration on Apache HTTP Server versions 2.4.0 - 2.4.55 leads to HTTP Request Smuggling vulnerability.
- </li>
- <li>
-  IoT - 在intranet控制device
-  <a href="https://github.com/georgezhao2010/midea_ac_lan/blob/master/README_hans.md">
-   midea_ac_lan
-  </a>
- </li>
- <li>
-  <a href="https://rmkit.dev/eink-is-so-retropunk/">
-   E-ink is so Retropunk
-  </a>
-  用e-ink device來做hacking的感想
- </li>
- <li>
-  --
- </li>
+<li><a href="https://github.com/dhmosfunk/CVE-2023-25690-POC">CVE-2023-25690-POC</a>: CVE 2023 25690 Proof of concept - mod_proxy vulnerable configuration on Apache HTTP Server versions 2.4.0 - 2.4.55 leads to HTTP Request Smuggling vulnerability.</li>
+<li>IoT - 在intranet控制device <a href="https://github.com/georgezhao2010/midea_ac_lan/blob/master/README_hans.md">midea_ac_lan</a></li>
+<li><a href="https://rmkit.dev/eink-is-so-retropunk/">E-ink is so Retropunk</a> 用e-ink device來做hacking的感想</li>
+<li>--</li>
 </ul>
-<h1>
- Blog Post
-</h1>
+<h1>Blog Post</h1>
 <ul>
- <li>
-  <a href="https://www.bitecode.dev/p/the-fast-track-tip">
-   The fast track tip
-  </a>
-  : 這篇在講組織變大的時候, 任何動作都帶來太多外掛的負荷導致成本逼近或大於效益的時候, 快速通道的解決方式.
- </li>
+<li><a href="https://www.bitecode.dev/p/the-fast-track-tip">The fast track tip</a>: 這篇在講組織變大的時候, 任何動作都帶來太多外掛的負荷導致成本逼近或大於效益的時候, 快速通道的解決方式.</li>
 </ul>
-<p>
- --
-</p>
-<h1>
- Development
-</h1>
+<p>--</p>
+<h1>Development</h1>
 <ul>
- <li>
-  <a href="https://github.com/hoppscotch/hoppscotch">
-   hoppscotch
-  </a>
-  :Open source API development ecosystem,
-  <a href="https://hoppscotch.io">
-   https://hoppscotch.io
-  </a>
- </li>
+<li><a href="https://github.com/hoppscotch/hoppscotch">hoppscotch</a> :Open source API development ecosystem, <a href="https://hoppscotch.io">https://hoppscotch.io</a></li>
 </ul>
-<h2>
- PSQL
-</h2>
+<h2>PSQL</h2>
 <ul>
- <li>
-  <a href="https://www.freecodecamp.org/news/postgresql-indexing-strategies/">
-   Advanced Indexing Strategies in PostgreSQL
-  </a>
- </li>
+<li><a href="https://www.freecodecamp.org/news/postgresql-indexing-strategies/">Advanced Indexing Strategies in PostgreSQL</a></li>
 </ul>
-<h2>
- Rust
-</h2>
+<h2>Rust</h2>
 <ul>
- <li>
-  <a href="https://bitbashing.io/async-rust.html">
-   Async Rust Is A Bad Language
-  </a>
-  : 哈哈
- </li>
+<li><a href="https://bitbashing.io/async-rust.html">Async Rust Is A Bad Language</a>: 哈哈</li>
 </ul>
+    </body>
+    </html>
+    

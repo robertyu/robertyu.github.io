@@ -1,16 +1,38 @@
 import os
 import markdown
 from bs4 import BeautifulSoup
+from pygments.formatters import HtmlFormatter
 
-def convert_md_to_html(md_file_path):
-    # Configure Markdown to HTML conversion with code syntax highlighting
-    md_extensions = ['codehilite']
+
+def convert_md_to_html(md_file_path, css_style='monokai'):
+    # Load Markdown content
     with open(md_file_path, 'r', encoding='utf-8') as md_file:
         md_content = md_file.read()
-    html_content = markdown.markdown(md_content, extensions=md_extensions)
-    soup = BeautifulSoup(html_content, 'html.parser')
-    pretty_html = soup.prettify()
-    return pretty_html
+
+    # Convert Markdown to HTML with syntax highlighting
+    html_content = markdown.markdown(md_content, extensions=['codehilite'])
+
+    # Generate CSS for the chosen Pygments style
+    formatter = HtmlFormatter(style=css_style)
+    css_content = formatter.get_style_defs('.codehilite')
+
+    # Wrap the content in HTML tags, including the Pygments CSS in a <style> tag
+    html_template = f"""
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{os.path.basename(md_file_path).replace('.md', '')}</title>
+        <style>{css_content}</style>
+    </head>
+    <body>
+        {html_content}
+    </body>
+    </html>
+    """
+    return html_template
+
 
 def save_html(html_content, output_file_path):
     with open(output_file_path, 'w', encoding='utf-8') as html_file:
